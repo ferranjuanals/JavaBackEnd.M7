@@ -73,9 +73,11 @@ public class VideoBuilder {
 		List <Video> allVideos = vRepository.getAllVideos();
 		int i = 1;
 		for(Video v:allVideos) {
-			System.out.print(i + ".");
-			System.out.println(v.videoInfo());
-			i++;
+			if(v.getUser().equals(user)) {
+				System.out.print(i + ".");
+				System.out.println(v.videoInfo());
+				i++;
+			}
 		}
 		System.out.println("--------------------------------------");
 		System.out.println();
