@@ -145,6 +145,5 @@ public class UserBuilder {
 		}
 		return allUsers;
 	}
-
 	
 }

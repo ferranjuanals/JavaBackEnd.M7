@@ -14,8 +14,8 @@ public class Main {
 	public static void main(String[] args) {
 		
 		// Instanciar constructor d'usuaris
-		UserBuilder user_builder = new UserBuilder();
-		
+		UserBuilder userBuilder = new UserBuilder();
+
 		// Menú principal
 		System.out.println("Menú principal");
 		boolean b;			
@@ -40,13 +40,13 @@ public class Main {
 			case 1:
 				// Comprovar usuari
 				System.out.println("Inici sessió");
-				user_builder.checkUser(scanner);
+				userBuilder.checkUser(scanner);
 				b = false;
 				break;
 			case 2:
 				// Registrar usuari
 				System.out.println("Nou registre");
-				user_builder.createUser(scanner);
+				userBuilder.createUser(scanner);
 				b = false;
 				break;
 			case 3:
@@ -70,7 +70,7 @@ public class Main {
 	public static void menu(String user_name) {
 		
 		// Instanciar constructor de videos
-		VideoBuilder video_builder = new VideoBuilder(user_name);
+		VideoBuilder videoBuilder = new VideoBuilder(user_name);
 		
 		// Menú personal
 		System.out.println("Menú personal");
@@ -97,13 +97,13 @@ public class Main {
 		case 1:
 			// Crear nou video
 			System.out.println("Crear video");
-			video_builder.createVideo(user_name, scanner);
+			videoBuilder.createVideo(user_name, scanner);
 			c = false;
 			break;
 		case 2:
 			// Veure informació de tots els videos
 			System.out.println("Llistat de videos:");
-			video_builder.showVideosInfo(user_name);
+			videoBuilder.showVideosInfo(user_name);
 			c = false;
 			break;
 		case 3:

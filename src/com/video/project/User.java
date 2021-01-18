@@ -1,6 +1,6 @@
 package com.video.project;
 
-import java.util.Date;
+import java.time.LocalDate;
 
 public class User {
 	
@@ -9,7 +9,7 @@ public class User {
 	private String first_name;
 	private String last_name;
 	private String password;
-	private Date registration_date;
+	private LocalDate registration_date;
 	
 	// Constructor
 	public User(String user, String first_name, String last_name, String password) throws Exception {
@@ -20,7 +20,7 @@ public class User {
 		this.first_name = first_name;
 		this.last_name = last_name;
 		this.password = password;
-		registration_date = new Date();
+		registration_date = LocalDate.now();
 	}
 	
 	// Retorna el nom d'usuari
